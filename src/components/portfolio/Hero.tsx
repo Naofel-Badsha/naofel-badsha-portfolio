@@ -67,7 +67,7 @@ export const Hero = () => {
 
           <div className="flex items-center gap-8 pt-6 border-t border-border/50">
             <div>
-              <div className="font-display text-2xl font-bold gradient-text">10+</div>
+              <div className="font-display text-2xl font-bold gradient-text">05+</div>
               <div className="text-xs text-muted-foreground uppercase tracking-wider">Projects</div>
             </div>
             <div>
