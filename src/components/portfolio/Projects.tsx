@@ -2,31 +2,44 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { SectionHeading } from "./About";
-import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
-    title: "Lumen — Business Website",
+    title: "Insurance Company Website",
     description:
       "A fully responsive marketing site for a SaaS startup. Built with Next.js and Tailwind, optimized for SEO and Core Web Vitals.",
-    image: p1,
+    image: "https://i.ibb.co.com/mrjmP7YP/Capture.png",
     tags: ["Next.js", "Tailwind", "Framer Motion", "SEO"],
+    liveDemo: "https://full-custom-nextjs-project.vercel.app/",
+    sourcCode: "https://github.com/Naofel-Badsha/full-custom-nextjs-project"
   },
   {
-    title: "Inkwell — Blog / CMS App",
+    title: "Online Food Delivery App",
     description:
-      "A full-stack blog platform with markdown editor, dynamic routing and authentication. Clean reading experience from day one.",
-    image: p2,
-    tags: ["React", "Node.js", "MongoDB", "Auth"],
+      "A full-stack food delivery platform with a markdown editor, dynamic routing, and authentication. Clean reading experience from day one.",
+    image: "https://i.ibb.co.com/xqZjDsTm/Capture-2.png",
+    tags: ["React", "Tailwind", "Node.js", "MongoDB", "Auth"],
+    liveDemo: "https://food-delivery-1-client.vercel.app/",
+    sourcCode: "https://github.com/Naofel-Badsha/food-delivery-1-client"
   },
   {
-    title: "Pulse — SaaS Dashboard UI",
+    title: "Clean Code Single Agency App",
     description:
-      "An analytics dashboard with charts, dark mode and a polished design system. Pixel-perfect on every breakpoint.",
-    image: p3,
-    tags: ["React", "TypeScript", "Recharts", "Design System"],
+      "A modern single-page agency website with a beautiful static dashboard and secure Firebase Authentication integration.",
+    image: "https://i.ibb.co.com/ZRtWMcWb/Capture.png",
+    tags: ["React", "Tailwind", "Recharts", "Firebase", "Design System"],
+    liveDemo: "https://clean-code-agency-website.vercel.app/",
+    sourcCode: "https://github.com/Naofel-Badsha/CleanCode-Agency-Website"
+  },
+  {
+    title: "Online Furniture-mart App",
+    description:
+      "A modern multi-page eCommerce demo website for furniture shopping, featuring a clean and professional dashboard design.",
+    image: "https://i.ibb.co.com/KcV2WMF9/Capture-1.png",
+    tags: ["React", "Tailwind", "Recharts", "Design System"],
+    liveDemo: "https://react-js-router-practice.vercel.app/",
+    sourcCode: "https://github.com/Naofel-Badsha/React-Js-Router-Practice"
   },
 ];
 
@@ -81,13 +94,18 @@ export const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3 mt-6">
-                  <Button variant="hero" size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4" /> Live Demo
+                <div className="flex items-center justify-between gap-3 mt-6">
+                  <Link to={p.liveDemo}>
+                    <Button variant="hero" size="sm" className="flex-1">
+                      <ExternalLink className="w-4 h-4" /> Live Demo
+                    </Button>
+                  </Link>
+
+                  <Link to={p.sourcCode}>
+                  <Button variant="glass" size="sm" className="flex-1 border-[#7B67F6]/30 hover:border-[#7B67F6]/50 hover:-translate-y-1" >
+                    <Github className="w-4 h-4 animate-pulse" /> Code
                   </Button>
-                  <Button variant="glass" size="sm" className="flex-1">
-                    <Github className="w-4 h-4" /> Code
-                  </Button>
+                  </Link>
                 </div>
               </div>
             </article>
