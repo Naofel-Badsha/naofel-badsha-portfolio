@@ -30,6 +30,8 @@ export const Services = () => {
 
   return (
     <section id="services" className="section-padding relative">
+    <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary/15 blur-[70px] animate-pulse" />
+     
       <div ref={ref} className={`mx-auto max-w-6xl ${visible ? "animate-fade-in-up" : "opacity-0"}`}>
         <SectionHeading
           eyebrow="Services"

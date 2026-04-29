@@ -48,8 +48,10 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="section-padding relative">
-      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary/15 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" />
+      {/* <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary/15 blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/15 blur-[120px]" /> */}
+      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-primary/15 blur-[80px] animate-pulse" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/15 blur-[50px] animate-pulse" />
 
       <div ref={ref} className={`mx-auto max-w-6xl relative ${visible ? "animate-fade-in-up" : "opacity-0"}`}>
         <SectionHeading

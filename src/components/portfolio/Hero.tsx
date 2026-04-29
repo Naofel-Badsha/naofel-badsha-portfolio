@@ -21,9 +21,9 @@ export const Hero = () => {
     >
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg opacity-40" />
-      <div className="absolute top-1/4 -left-32 w-[480px] h-[480px] rounded-full bg-primary/30 blur-[120px] animate-glow-pulse" />
-      <div className="absolute bottom-0 -right-32 w-[520px] h-[520px] rounded-full bg-accent/30 blur-[140px] animate-glow-pulse" style={{ animationDelay: "2s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-cyan/10 blur-[160px]" />
+      <div className="absolute top-1/4 -left-32 w-[480px] h-[480px] rounded-full bg-primary/30 blur-[60px] animate-glow-pulse" />
+      <div className="absolute bottom-0 -right-32 w-[520px] h-[520px] rounded-full bg-accent/30 blur-[70px] animate-glow-pulse" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-cyan/10 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left */}
