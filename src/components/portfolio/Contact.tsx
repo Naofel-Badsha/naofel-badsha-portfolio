@@ -31,7 +31,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding relative">
+    <section id="contact" className="section-padding relative ">
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[140px]" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-accent/20 blur-[140px]" />
 
@@ -44,8 +44,8 @@ export const Contact = () => {
         />
 
         <div className="grid lg:grid-cols-2 gap-8 mt-16">
-          {/* Left: channels */}
-          <div className="glass-card rounded-3xl p-8 lg:p-10 flex flex-col hover:border-[#7B67F6]/50 duration-500">
+          {/*----------Left--------channels-------------------*/}
+          <div className="glass-card rounded-3xl p-5 lg:p-10 flex flex-col hover:border-[#7B67F6]/50 duration-500">
             <h3 className="font-display text-2xl font-semibold mb-2">Get in touch</h3>
             <p className="text-muted-foreground mb-8">
               Reach out through any channel — I usually reply within 24 hours.
@@ -63,15 +63,15 @@ export const Contact = () => {
                   </div>
                   <div className="min-w-0">
                     <div className="text-xs uppercase tracking-wider text-muted-foreground">{c.label}</div>
-                    <div className="font-medium truncate">{c.value}</div>
+                    <div className="font-medium truncate"><p className="text-[15px]">{c.value}</p></div>
                   </div>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Right: form */}
-          <form onSubmit={onSubmit} className="glass-card rounded-3xl p-8 lg:p-10 space-y-5 hover:border-[#7B67F6]/50 duration-500">
+          {/*-----------Right-------form---------------*/}
+          <form onSubmit={onSubmit} className="glass-card rounded-3xl p-5 lg:p-10 space-y-5 hover:border-[#7B67F6]/50 duration-500">
             <div>
               <Label htmlFor="name" className="text-sm">Name</Label>
               <Input id="name" name="name" required placeholder="Your full name" className="mt-2 h-12 bg-secondary/40 border-border" />

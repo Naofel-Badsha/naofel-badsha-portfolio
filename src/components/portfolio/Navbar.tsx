@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Code2, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { SiGithub } from "react-icons/si";
 
 const links = [
   { id: "home", label: "Home" },
@@ -42,20 +44,18 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"
+        }`}
     >
       <nav
-        className={`mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between rounded-2xl transition-all duration-500 ${
-          scrolled ? "glass py-3" : "py-4"
-        }`}
+        className={`mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between rounded-2xl transition-all duration-500 border-[1px] border-[#7B67F6]/40 ${scrolled ? "glass py-3" : "py-4"
+          }`}
       >
         <button onClick={() => go("home")} className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center glow">
             <Code2 className="w-5 h-5 text-primary-foreground" />
           </div>
-          <span className="font-display font-bold text-lg tracking-tight">Alex<span className="gradient-text">.dev</span></span>
+          <span className="font-display font-bold text-lg tracking-tight">B<span className="gradient-text">adSha</span></span>
         </button>
 
         <ul className="hidden lg:flex items-center gap-1">
@@ -63,9 +63,8 @@ export const Navbar = () => {
             <li key={l.id}>
               <button
                 onClick={() => go(l.id)}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors ${
-                  active === l.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`relative px-4 py-2 text-sm font-medium transition-colors ${active === l.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 {l.label}
                 {active === l.id && (
@@ -77,9 +76,12 @@ export const Navbar = () => {
         </ul>
 
         <div className="hidden lg:block">
-          <Button variant="hero" size="sm" onClick={() => go("contact")}>
-            Hire Me
-          </Button>
+          <Link to="https://github.com/naofel-badsha">
+            <Button variant="hero" size="sm" >
+              <SiGithub />
+              GitHub
+            </Button>
+          </Link>
         </div>
 
         <button
@@ -93,23 +95,25 @@ export const Navbar = () => {
 
       {open && (
         <div className="lg:hidden mx-auto max-w-6xl mt-2 px-5">
-          <div className="glass rounded-2xl p-4 flex flex-col gap-1 animate-fade-in">
+          <div className="glass rounded-2xl p-4 flex flex-col gap-1 animate-fade-in space-y-2">
             {links.map((l) => (
               <button
                 key={l.id}
                 onClick={() => go(l.id)}
-                className={`text-left px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                  active === l.id
+                className={`text-left px-4 py-3 rounded-xl text-sm font-medium transition-colors ${active === l.id
                     ? "bg-secondary text-foreground"
-                    : "text-muted-foreground hover:bg-secondary/60"
-                }`}
+                    : "text-muted-foreground hover:bg-secondary border-[1px] border-[#7B67F6]/20 hover:border-[#7B67F6]/70"
+                  }`}
               >
                 {l.label}
               </button>
             ))}
-            <Button variant="hero" className="mt-2" onClick={() => go("contact")}>
-              Hire Me
+          <Link to="https://github.com/naofel-badsha">
+            <Button variant="hero" size="sm" className="w-full">
+              <SiGithub />
+              GitHub
             </Button>
+          </Link>
           </div>
         </div>
       )}
